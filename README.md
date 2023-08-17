@@ -1,7 +1,6 @@
 # myFridge
-## 만들게된 계기
-이전 프로젝트에서 부족함을 느껴 개인적으로 이전 버전을 발전시켜봄
-https://drive.google.com/drive/folders/1UYJQw3kz4SL0GQJuXH4hzmCXBrtK6FAa?usp=drive_link
+이전에 진행한 [프로젝트](https://drive.google.com/drive/folders/1UYJQw3kz4SL0GQJuXH4hzmCXBrtK6FAa?usp=drive_link)의 미흡한 부분을 개선하여 개인적으로 발전시킨 프로젝트
+
 ## 시작 가이드
 *1. rcmn/sql.txt를 참조해 db 생성*  
 *2. rcmn/ingrds.csv, rcmn/recipes.csv를 ingrdients, recipes table에 import*  
