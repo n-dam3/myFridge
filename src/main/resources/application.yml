@@ -1,0 +1,52 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+      
+spring:
+  datasource:
+    driver-class-name: #
+    url: #
+    username: #
+    password: #
+    
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: #
+    
+  mail:
+    host: #
+    port: #
+    username: #
+    password: #
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 5000
+          starttls:
+            enable: true
+                 
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: #
+            client-secret: #
+            scope:
+            - email
+            - profile
+            
+          facebook:
+            client-id: #
+            client-secret: #
+            scope:
+            - email
+            - public_profile

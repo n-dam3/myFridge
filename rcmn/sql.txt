@@ -1,0 +1,83 @@
+DROP DATABASE my_fridge;
+CREATE DATABASE my_fridge;
+use my_fridge;
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users(
+user_id VARCHAR(30) NOT NULL,
+user_pw VARCHAR(60) NOT NULL,
+user_name VARCHAR(30) NOT NULL,
+user_roles VARCHAR(20) NOT NULL,
+user_favor VARCHAR(10),
+user_jjim TEXT,
+PRIMARY KEY (user_id)
+);
+
+DROP TABLE IF EXISTS fresh_ingredients;
+CREATE TABLE fresh_ingredients(
+seq_id INT NOT NULL AUTO_INCREMENT,
+user_id VARCHAR(32) NOT NULL,
+ingredient_nm VARCHAR(32) NOT NULL,
+ingredient_num SMALLINT NOT NULL,
+storage_mtd VARCHAR(2) NOT NULL,
+storage_date SMALLINT NOT NULL,
+expiration_date DATETIME NOT NULL,
+memo VARCHAR(20),
+freshness VARCHAR(1) DEFAULT 'F',
+PRIMARY KEY(seq_id),
+FOREIGN KEY(user_id) REFERENCES users(`user_id`)
+ON DELETE CASCADE,
+INDEX fk_user_idx (user_id)
+);
+
+DROP TABLE IF EXISTS soon_to_expire_ingredients;
+CREATE TABLE soon_to_expire_ingredients(
+seq_id INT NOT NULL AUTO_INCREMENT,
+user_id VARCHAR(32) NOT NULL,
+ingredient_nm VARCHAR(32) NOT NULL,
+ingredient_num SMALLINT NOT NULL,
+storage_mtd VARCHAR(2) NOT NULL,
+storage_date SMALLINT NOT NULL,
+expiration_date DATETIME NOT NULL,
+memo VARCHAR(20),
+freshness VARCHAR(1) DEFAULT 'S',
+PRIMARY KEY(seq_id),
+FOREIGN KEY(user_id) REFERENCES users(`user_id`)
+ON DELETE CASCADE,
+INDEX fk_user_idx (user_id)
+);
+
+DROP TABLE IF EXISTS expired_ingredients;
+CREATE TABLE expired_ingredients(
+seq_id INT NOT NULL AUTO_INCREMENT,
+user_id VARCHAR(32) NOT NULL,
+ingredient_nm VARCHAR(32) NOT NULL,
+ingredient_num SMALLINT NOT NULL,
+storage_mtd VARCHAR(2) NOT NULL,
+storage_date SMALLINT NOT NULL,
+expiration_date DATETIME NOT NULL,
+memo VARCHAR(20),
+freshness VARCHAR(1) DEFAULT 'E',
+PRIMARY KEY(seq_id),
+FOREIGN KEY(user_id) REFERENCES users(`user_id`)
+ON DELETE CASCADE,
+INDEX fk_user_idx (user_id)
+);
+
+DROP TABLE IF EXISTS ingredients;
+CREATE TABLE ingredients(
+ingredient_id SMALLINT NOT NULL AUTO_INCREMENT,
+ingredient_nm VARCHAR(20) NOT NULL,
+PRIMARY KEY (ingredient_id)
+);
+
+DROP TABLE IF EXISTS recipes;
+CREATE TABLE recipes(
+recipe_id INT NOT NULL,
+recipe_nm VARCHAR(20) NOT NULL,
+ckg_mtd VARCHAR(10) NOT NULL,
+ckg_situ VARCHAR(10) NOT NULL,
+ckg_type VARCHAR(10) NOT NULL,
+recipe_ingrds VARCHAR(100) NOT NULL,
+PRIMARY KEY (recipe_id)
+);
