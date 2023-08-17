@@ -1,12 +1,15 @@
 # myFridge
+## 만들게된 계기
+이전 프로젝트에서 부족함을 느껴 개인적으로 이전 버전을 발전시켜봄
+https://drive.google.com/drive/folders/1UYJQw3kz4SL0GQJuXH4hzmCXBrtK6FAa?usp=drive_link
 ## 시작 가이드
 *1. rcmn/sql.txt를 참조해 db 생성*  
 *2. rcmn/ingrds.csv, rcmn/recipes.csv를 ingrdients, recipes table에 import*  
 *3. src/main/resources/application.yml에 jpa, smtp, oauth2 설정 추가*
 ## 기술 스택
-### Front :
+### *Front :*
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white"/> <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat&logo=JavaScript&logoColor=black"/> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jquery&logoColor=white"/> <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white"/>
-### Back :
+### *Back :*
 <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat&logo=springboot&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat&logo=springsecurity&logoColor=white"/> <img src="https://img.shields.io/badge/JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white"/> <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white"/> 
 ## 주요 기능
 ### *회원 가입*
@@ -45,5 +48,5 @@
 <img src="https://github.com/n-dam3/myFridge/assets/113612654/f978b598-e6e7-4d80-b03a-808428c089f2" width="600" height="340">
 
 ### *메일링*
-#### - 18:00시에 보관기한 임박 식재료를 회원가입한 메일에 메일링
+#### - *매일 18:00시에 보관기한 임박 식재료를 회원가입한 메일에 메일링*
 <img src="https://github.com/n-dam3/myFridge/assets/113612654/d6819acc-f9c1-4e16-8cbd-05de5b0746a3">
