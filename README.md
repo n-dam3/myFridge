@@ -46,4 +46,4 @@
 
 ### *메일링*
 #### - 18:00시에 보관기한 임박 식재료를 회원가입한 메일에 메일링
-<img src="https://github.com/n-dam3/myFridge/assets/113612654/587313d7-e360-4bd1-a7b4-8ab2580d2e8b">
+<img src="https://github.com/n-dam3/myFridge/assets/113612654/d6819acc-f9c1-4e16-8cbd-05de5b0746a3">
